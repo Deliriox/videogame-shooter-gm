@@ -1,12 +1,17 @@
 //Movement
 x-=spd;
-if (alarm_get(0) == 0)
+bullet_speed=weapon.bullet_speed;
+weapon_damage=weapon.total_damage;
+if (!bullet_shot)
 {
+	bullet_shot=true;
 	instance_create_layer(x,y,"Instances",obj_bullet_enemy,{
-		speed : 8,
-		direction : 180,
-		sprite_index: spr_bullet_enemy,
-		damage : 1
+		speed : bullet_speed,
+		direction : direction,
+		sprite_index: bullet_spr,
+		damage : weapon_damage
 	});
-	alarm_set(0,test);
+	alarm_set(0,fire_rate);
 }
+
+if (alarm_get(0)==0) bullet_shot=false;

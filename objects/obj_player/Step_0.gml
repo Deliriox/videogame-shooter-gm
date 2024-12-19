@@ -26,9 +26,19 @@ vspeed = clamp(vspeed, -spd, spd);
 hspeed = clamp(hspeed, sprite_width - x, room_width - x);
 vspeed = clamp(vspeed, sprite_height/2 - y, (room_height-(sprite_height/2))-y);
 
+//Get current weapon attributes
+var weapon_damage=current_weapon.total_damage;
+var fire_rate = current_weapon.fire_rate;
+
 
 //Shooting
-if (mouse_check_button_pressed(mb_left))
+if (mouse_check_button(mb_left) && !bullet_shot)
 {
-	instance_create_layer(x,y,"Instances",obj_bullet_player);
+	bullet_shot=true;
+	instance_create_layer(x,y,"Instances",obj_bullet_player,{
+	damage: weapon_damage
+	});
+	alarm_set(0,fire_rate);
 }
+
+if (alarm_get(0) == 0) bullet_shot=false;
