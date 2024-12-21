@@ -8,8 +8,8 @@
   "name":"obj_main_weapon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Main weapon",
+    "path":"folders/Objects/Weapons/Player weapons/Main weapon.yy",
   },
   "parentObjectId":null,
   "persistent":false,

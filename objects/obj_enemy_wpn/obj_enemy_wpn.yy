@@ -8,8 +8,8 @@
   "name":"obj_enemy_wpn",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Type 1 weapon",
+    "path":"folders/Objects/Weapons/Enemy weapons/Type 1 weapon.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -9,3 +9,5 @@ bullet_speed=0;
 weapon_damage=0;
 bullet_shot=false;
 fire_rate=60;
+
+alarm_set(0,fire_rate);

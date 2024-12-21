@@ -8,4 +8,6 @@ weapon=obj_enemy_wpn;
 bullet_speed=0;
 weapon_damage=0;
 bullet_shot=false;
-fire_rate=20;
+fire_rate=45;
+
+alarm_set(0,fire_rate);
